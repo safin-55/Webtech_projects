@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analyzer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Unlock your <span class="green">potential</span><br>with Text Analyzer</h1>
+    <p class="subtitle">Paste any paragraph to get word count, character count, and a reversed version.</p>
+  </div>
+
+  <div class="main-card">
+    <textarea id="inputText" placeholder="Write, paste, or type your text here..."></textarea>
+
+    <div class="card-footer">
+      <button class="pill-btn active" onclick="analyzeText()">&#128269; Analyze Text</button>
+      <button class="pill-btn" onclick="clearAll()">&#10005; Clear</button>
+    </div>
+  </div>
+
+  <p id="errorMsg">&#9888; Please enter some text before analyzing.</p>
+
+  <div id="resultBox">
+    <div class="stats-row">
+      <div class="stat-card">
+        <p class="stat-label">Total Characters</p>
+        <p class="stat-number" id="charCount">0</p>
+      </div>
+      <div class="stat-card">
+        <p class="stat-label">Total Words</p>
+        <p class="stat-number" id="wordCount">0</p>
+      </div>
+    </div>
+    <div class="reversed-card">
+      <p class="reversed-label">&#8635; Reversed Text</p>
+      <p id="reversedText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
